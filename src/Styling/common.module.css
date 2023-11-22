@@ -1,0 +1,21 @@
+.feedbackBtn{
+    margin: 10px;
+    border: 3px solid #ed462f;
+    padding: 10px;
+    width: 120px;
+    border-radius: 30px;
+    color: #ed462f;
+    margin-left: 90%;
+}
+
+.feedbackBtn button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.feedbackBtn:hover{
+    color: white;
+    background-color: #ed462f;
+}

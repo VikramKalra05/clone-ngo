@@ -1,0 +1,91 @@
+.topBar{
+    background-image: url(https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600);
+    padding: 150px 100px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.topBar h1{
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.info{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.info>div{
+    gap: 50px;
+}
+
+.topInfo{
+    width: 100%;
+}
+
+.info h1, .workDiv h1{
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.info p{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.workDiv{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
+    background-color: #fafafa;
+}
+
+.workCont{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.workCont>div{
+    margin: auto;
+}
+
+.workCont h2{
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 24px;
+}
+.workCont h3{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.workCont img{
+    margin: auto;
+}
+
+#team{
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#team>div{
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#team h3{
+    font-size: 16px;
+    padding: 10px;
+}
+
+#team img{
+    border-radius: 50%;
+    padding: 20px 50px;
+}

@@ -1,0 +1,29 @@
+.topBar{
+    padding: 50px 200px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.topBar>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 500px;
+    padding: 20px;
+}
+
+.topBar h1{
+    font-size: 40px;
+}
+.topBar p{
+    font-size: 24px;
+}
+.topBar>div>div{
+    background-color: #ed462f;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
