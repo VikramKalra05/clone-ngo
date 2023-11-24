@@ -27,3 +27,126 @@
     border-radius: 20px;
     color: white;
 }
+
+.campaignDiv{
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    width: 60%;
+}
+
+.campaignDiv h1{
+    font-size: 44px;
+}
+
+.campaignDiv>div{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    gap: 40px;
+    width: 60%;
+}
+
+.campaignDiv h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#focusDiv>h2{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#focusDiv>div{
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    gap: 100px;
+}
+
+.statusQuo{
+    margin-top: 100px;
+    background-image: url(https://jhatkaa.org/wp-content/uploads/2023/02/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+#communityDiv>h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+#communityDiv>div{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#communityDiv>div>div>h3, #communityDiv>div>div>h4{
+    color: #ed462f;
+    margin-top: 5px;
+}
+
+#communityDiv h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#communityDiv h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;       
+}
+
+.redLine{
+    width: 60%;
+    height: 2px;
+    background-color: #ed462f;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.blog{
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.blog h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.blogCont{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.blog img{
+    height: 300px;
+}
+
+.btn{
+    margin: auto;
+    background-color: #ed462f;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    max-width: 150px;
+    text-align: center;
+}
+
+.btn a{
+    margin: auto;
+    font-size: 20px;
+}

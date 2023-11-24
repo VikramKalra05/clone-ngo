@@ -1,0 +1,40 @@
+.campaignDiv{
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
+    background-color: #fbfbfb; 
+}
+
+.campaignDiv>h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.campaignCont{
+    padding: 50px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.campaignCard{
+    padding-bottom: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.campaignCard>div{
+    padding: 20px;
+}
+
+.campaignCard h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.campaignCard p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}

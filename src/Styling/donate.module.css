@@ -1,0 +1,15 @@
+.topBar{
+    width: 100%;
+    height: 400px;
+    background-image: url('https://jhatkaa.org/wp-content/uploads/2022/12/banerimage.jpeg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.donateDiv{
+    width: 40%;
+    border: 1px solid red;
+    margin-left: 50%;
+    padding: 100px;
+}

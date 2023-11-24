@@ -10,26 +10,37 @@ import {
     Button,
     FormControl,
     FormLabel,
-    FormErrorMessage,
-    FormHelperText,
+    useToast,
     Input
 } from '@chakra-ui/react'
 
 export function Feedback({value}){
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+    const [phNumber, setPhNumber] = useState("");
     const [msg, setMsg] = useState("");
     const [userFeedback, setUserFeedback] = useState([]);
+    const toast = useToast()
     
     const details = {
         name,
         email,
+        phNumber,
         msg
     }
 
     const handleSubmit = () => {
+        toast({
+            title: 'Feedback sent successfully!',
+            description: "Thank you for your feedback",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+        })
         setUserFeedback([...userFeedback, details])
-        value.onClose();
+        setTimeout(()=>{
+            value.onClose();
+        },500)
     }
 
     return (
@@ -44,6 +55,8 @@ export function Feedback({value}){
                 <FormControl p={4}>
                     <FormLabel>Your Name*</FormLabel>
                     <Input type='text' value={name} onChange={(event)=>setName(event.target.value)}/>
+                    <FormLabel>Your Phone Number*</FormLabel>
+                    <Input type='number' value={phNumber} onChange={(event)=>setPhNumber(event.target.value)}/>
                     <FormLabel>Your Email Address*</FormLabel>
                     <Input type='email' value={email} onChange={(event)=>setEmail(event.target.value)} isRequired/>
                     <FormLabel>Message</FormLabel>
