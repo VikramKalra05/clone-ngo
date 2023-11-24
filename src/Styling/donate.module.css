@@ -9,7 +9,64 @@
 
 .donateDiv{
     width: 40%;
-    border: 1px solid red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-left: 50%;
-    padding: 100px;
+    margin-top: -20%;
+    background-color: white;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+}
+
+.headingDiv{
+    width: 100%;
+    background-color: #fbe8e9;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.buttonCont{
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.buttonCont>button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #515251;
+    color: white;
+}
+
+.inpText{
+    border: none;
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid;
+    appearance: none;
+    border-radius: 5px;
+}
+
+.amount:focus{
+    outline: none;
+}
+
+.payBtn{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: #ed462f;
+    padding: 10px;
+    font-size: 20px;
 }

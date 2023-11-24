@@ -17,7 +17,7 @@ export default function Footer(){
                     <h1>Other Links</h1>
                     <a href="/">Annual Reports</a>
                     <a href="/">Blog</a>
-                    <a href="">Careers</a>
+                    <a href="/">Careers</a>
                     <a href="/">FCRA</a>
                     <a href="/">Posh</a>
                     <a href="/">Lungs Toolkit</a>
