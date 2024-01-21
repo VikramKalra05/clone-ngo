@@ -3,24 +3,52 @@ import styles from "../Styling/donate.module.css"
 
 export default function DonateCard(){
     const [amount, setAmount] = useState();
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phNumber, setPhNumber] = useState();
-    const [panCard, setPanCard] = useState("");
-    const [address, setAddress] = useState("");
-    const [city, setCity] = useState("");
-    const [pinCode, setPinCode] = useState();
+    const [Name, setName] = useState("");
+    const [Email, setEmail] = useState("");
+    const [Phone, setPhNumber] = useState();
+    const [Pan, setPanCard] = useState("");
+    const [Address, setAddress] = useState("");
+    const [City, setCity] = useState("");
+    const [Pincode, setPinCode] = useState();
 
-    // const userDetails = {
-    //     name,
-    //     email,
-    //     phNumber,
-    //     panCard,
-    //     address,
-    //     city,
-    //     pinCode,
-    //     amount
-    // }
+    const userDetails = {
+        Name,
+        Email,
+        Phone,
+        Pan,
+        Address,
+        City,
+        Pincode,
+    }
+
+    const handleSubmit = async () => {
+        for (let key in userDetails){
+            if(userDetails[key] === ""){
+                return alert("Fill all the details")
+            }
+        }
+
+        console.log(userDetails);
+        fetch('https://sheetdb.io/api/v1/3i68exkhj2eid', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                data: [ 
+                    userDetails
+                ]
+            })
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => {
+            console.log(error);
+        });
+
+
+    }
 
     return (
         <div className={styles.donateDiv}>
@@ -39,14 +67,14 @@ export default function DonateCard(){
                 <button>Once</button>
                 <button>Yearly</button>
             </div>
-            <input type="text" placeholder="Enter Full Name" className={styles.inpText} value={name} onChange={(e)=>setName(e.target.value)}/>
-            <input type="email" placeholder="Enter Email" className={styles.inpText} value={email} onChange={(e)=>setEmail(e.target.value)}/>
-            <input type="number" placeholder="Enter Phone Number" className={styles.inpText} value={phNumber} onChange={(e)=>setPhNumber(e.target.value)}/>
-            <input type="text" placeholder="Enter Pan Card" className={styles.inpText} id={styles.address} value={panCard} onChange={(e)=>setPanCard(e.target.value)}/>
-            <input type="text" placeholder="Enter Address" className={styles.inpText} value={address} onChange={(e)=>setAddress(e.target.value)}/>
-            <input type="text" placeholder="Enter City" className={styles.inpText} value={city} onChange={(e)=>setCity(e.target.value)}/>
-            <input type="number" placeholder="Enter Pin Code" className={styles.inpText} value={pinCode} onChange={(e)=>setPinCode(e.target.value)}/>
-            <button className={styles.payBtn}>PAY</button>
+            <input type="text" placeholder="Enter Full className" className={styles.inpText} value={Name} onChange={(e)=>setName(e.target.value)}/>
+            <input type="email" placeholder="Enter Email" className={styles.inpText} value={Email} onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="number" placeholder="Enter Phone Number" className={styles.inpText} value={Phone} onChange={(e)=>setPhNumber(e.target.value)}/>
+            <input type="text" placeholder="Enter Pan Card" className={styles.inpText} id={styles.address} value={Pan} onChange={(e)=>setPanCard(e.target.value)}/>
+            <input type="text" placeholder="Enter Address" className={styles.inpText} value={Address} onChange={(e)=>setAddress(e.target.value)}/>
+            <input type="text" placeholder="Enter City" className={styles.inpText} value={City} onChange={(e)=>setCity(e.target.value)}/>
+            <input type="number" placeholder="Enter Pin Code" className={styles.inpText} value={Pincode} onChange={(e)=>setPinCode(e.target.value)}/>
+            <button className={styles.payBtn} onClick={handleSubmit}>PAY</button>
         </div>
     )
 }
